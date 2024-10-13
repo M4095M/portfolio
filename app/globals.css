@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.loading-bar {
+  background: linear-gradient(
+      transparent calc(0 * 100% / 6),
+      black 0 calc(3 * 100% / 6),
+      transparent 0
+    ) left bottom,
+    linear-gradient(
+      transparent calc(1 * 100% / 6),
+      black 0 calc(4 * 100% / 6),
+      transparent 0
+    ) center bottom,
+    linear-gradient(
+      transparent calc(2 * 100% / 6),
+      black 0 calc(5 * 100% / 6),
+      transparent 0
+    ) right bottom;
+  background-size: 19% 600%;
+  background-repeat: no-repeat;
+  animation: l2 1s infinite linear;
+}
+
+@keyframes l2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
