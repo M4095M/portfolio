@@ -26,35 +26,46 @@ body {
   }
 }
 
-.loading-bar {
-  background: linear-gradient(
-      transparent calc(0 * 100% / 6),
-      black 0 calc(3 * 100% / 6),
-      transparent 0
-    ) left bottom,
-    linear-gradient(
-      transparent calc(1 * 100% / 6),
-      black 0 calc(4 * 100% / 6),
-      transparent 0
-    ) center bottom,
-    linear-gradient(
-      transparent calc(2 * 100% / 6),
-      black 0 calc(5 * 100% / 6),
-      transparent 0
-    ) right bottom;
-  background-size: 19% 600%;
-  background-repeat: no-repeat;
-  animation: l2 1s infinite linear;
+
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: currentColor;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 }
 
-@keyframes l2 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+

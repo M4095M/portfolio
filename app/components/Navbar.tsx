@@ -5,7 +5,11 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const LoadingBar = () => (
-  <div className="loading-bar  w-11 aspect-square"></div>
+  <div className="lds-facebook">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 );
 
 const Navbar = () => {
@@ -16,7 +20,11 @@ const Navbar = () => {
   }, []);
 
   if (!isClient) {
-    return null;
+    return (
+      <div className="flex justify-center">
+        <LoadingBar />
+      </div>
+    );
   }
 
   return (

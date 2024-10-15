@@ -29,7 +29,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <section id="experiences" className="py-16 px-6 lg:px-20">
+    <section id="experiences" className="relative py-16 px-6 lg:px-20">
       <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">
         Experiences
       </h1>

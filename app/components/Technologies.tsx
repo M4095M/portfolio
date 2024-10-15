@@ -17,12 +17,12 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="flex flex-col gap-4 justify-center items-center px-4 md:px-8 lg:px-16"
+      className="flex flex-col justify-center items-center px-4"
     >
-      <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
         Technologies
       </h1>
-      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8  lg:gap-10 py-8">
+      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 py-8">
         {skills.map((skill, index) => (
           <div
             key={index}
