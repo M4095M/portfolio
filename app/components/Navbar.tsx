@@ -101,7 +101,7 @@ const Navbar = () => {
 
       <div className="social-links flex flex-row gap-5 items-center text-white">
         <a
-          href="https://github.com/M4094M"
+          href="https://github.com/M4095M"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-gray-301"
