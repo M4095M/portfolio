@@ -18,11 +18,12 @@ const HeroSection = () => {
               building web, mobile, and desktop applications. With a solid
               foundation in software engineering and a focus on modern
               technologies like Next.js for web and Flutter for mobile, I also
-              develop desktop applications using Tauri (Rust).I use vim btw, but
-              with vscode (not for long), and a linux user. I am excited about
-              collaborating on innovative projects that make a real impact. Feel
-              free to explore my work and get in touch if you would like to
-              collaborate!
+              develop desktop applications using Tauri (Rust), but I am flexible
+              with any technologie. I post in my github some basic repos, as
+              important ones are private .I use vim btw, but with vscode (not
+              for long), and a linux user. I am excited about collaborating on
+              innovative projects that make a real impact. Feel free to explore
+              my work and get in touch if you would like to collaborate!
             </div>
           </div>
         </div>

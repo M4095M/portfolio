@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const LoadingBar = () => (
@@ -14,10 +20,15 @@ const LoadingBar = () => (
 
 const Navbar = () => {
   const [isClient, setIsClient] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   if (!isClient) {
     return (
@@ -29,13 +40,22 @@ const Navbar = () => {
 
   return (
     <div className="navbar flex fixed top-0 right-0 left-0 z-20 backdrop-blur justify-between items-center max-w-7xl mx-auto py-6 px-8">
-      <div className="nav-links flex flex-row gap-9 items-center text-white">
+      <div className="flex cursor-pointer items-center justify-between w-full md:hidden">
+        <div onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </div>
+      </div>
+
+      <div
+        className={`nav-links ${isMobileMenuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row gap-9 items-center text-white md:static absolute bg-charcoal  md:bg-transparent w-full rounded-xl md:w-auto left-0 top-full md:top-0 p-6 md:p-0`}
+      >
         <Link
           to="hero"
           spy={true}
           smooth={true}
           duration={499}
           offset={-101}
+          onClick={() => setIsMobileMenuOpen(false)}
           activeClass="active bg-gradient-to-t"
           className="nav-item hover:bg-gradient-to-t from-slateBlue to-royalBlue rounded-lg px-3 py-1 cursor-pointer"
         >
@@ -47,7 +67,8 @@ const Navbar = () => {
           smooth={true}
           duration={499}
           offset={-101}
-          activeClass="active  bg-gradient-to-t"
+          onClick={() => setIsMobileMenuOpen(false)}
+          activeClass="active bg-gradient-to-t"
           className="nav-item hover:bg-gradient-to-t from-slateBlue to-royalBlue rounded-lg px-3 py-1 cursor-pointer"
         >
           Technologies
@@ -58,7 +79,8 @@ const Navbar = () => {
           smooth={true}
           duration={499}
           offset={-101}
-          activeClass="active  bg-gradient-to-t"
+          onClick={() => setIsMobileMenuOpen(false)}
+          activeClass="active bg-gradient-to-t"
           className="nav-item hover:bg-gradient-to-t from-slateBlue to-royalBlue rounded-lg px-3 py-1 cursor-pointer"
         >
           Experiences
@@ -69,13 +91,15 @@ const Navbar = () => {
           smooth={true}
           duration={499}
           offset={-101}
+          onClick={() => setIsMobileMenuOpen(false)}
           activeClass="active bg-gradient-to-t"
           className="nav-item hover:bg-gradient-to-t from-slateBlue to-royalBlue rounded-lg px-3 py-1 cursor-pointer"
         >
           Education
         </Link>
       </div>
-      <div className="social-links flex flex-ow gap-5 items-center text-white">
+
+      <div className="social-links flex flex-row gap-5 items-center text-white">
         <a
           href="https://github.com/M4094M"
           target="_blank"
