@@ -1,5 +1,3 @@
-import { Element } from "react-scroll";
-
 const experiences = [
   {
     title: "Full Stack Developer at Telesoft",
