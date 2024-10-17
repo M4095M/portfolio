@@ -19,7 +19,7 @@ const HeroSection = () => {
               foundation in software engineering and a focus on modern
               technologies like Next.js for web and Flutter for mobile, I also
               develop desktop applications using Tauri (Rust), but I am flexible
-              with any technologie. I post in my github some basic repos, as
+              with any technology. I post in my github some basic repos, as
               important ones are private .I use vim btw, but with vscode (not
               for long), and a linux user. I am excited about collaborating on
               innovative projects that make a real impact. Feel free to explore
