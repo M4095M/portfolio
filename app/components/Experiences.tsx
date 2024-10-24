@@ -35,7 +35,7 @@ const Experiences = () => {
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="flex flex-col items-start gap-4 border border-goldenrod rounded-lg shadow-md p-6 duration-200 transition-transform transform hover:scale-105"
+            className="flex flex-col items-start gap-4 border border-royalBlue rounded-lg shadow-md p-6 duration-200 transition-transform transform hover:scale-105"
           >
             <div className="w-full">
               <h3 className="text-2xl font-semibold inline-block  bg-gradient-to-r from-sky-500 to-indigo-500 text-transparent bg-clip-text mb-2">
