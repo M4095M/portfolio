@@ -14,8 +14,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Showcase for my projects",
+  title: "Morsli Mohamed Abdennour - Full Stack Developer",
+  description:
+    "Portfolio showcasing full-stack development projects including web, mobile, desktop, and IoT applications. Specialized in Next.js, React, Laravel, Django, Flutter, and modern technologies.",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

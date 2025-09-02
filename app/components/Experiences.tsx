@@ -92,28 +92,33 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <section id="experiences" className="relative py-16 px-6 lg:px-20">
-      <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+    <section
+      id="experiences"
+      className="relative py-12 md:py-16 px-4 sm:px-6 lg:px-20"
+    >
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-center px-4">
         Experiences
       </h1>
-      <div className="space-y-16">
+      <div className="space-y-8 md:space-y-16">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="group flex flex-col items-start gap-4 border border-royalBlue rounded-lg shadow-md p-6 duration-300 transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/20 hover:border-sky-400"
+            className="group flex flex-col items-start gap-4 border border-royalBlue rounded-lg shadow-md p-4 sm:p-6 duration-300 transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/20 hover:border-sky-400"
           >
             <div className="w-full">
-              <h3 className="text-2xl font-semibold inline-block  bg-gradient-to-r from-sky-500 to-indigo-500 text-transparent bg-clip-text mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold inline-block bg-gradient-to-r from-sky-500 to-indigo-500 text-transparent bg-clip-text mb-2 leading-tight">
                 {experience.title}
               </h3>
-              <p className="text-whiteSmoke mb-4">{experience.description}</p>
+              <p className="text-whiteSmoke mb-4 text-sm sm:text-base leading-relaxed">
+                {experience.description}
+              </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 justify-start">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-start">
               {experience.technologies.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-charcoal border border-royalBlue text-sm px-4 py-1 rounded-full shadow-sm hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:border-transparent hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="bg-charcoal border border-royalBlue text-xs sm:text-sm px-3 sm:px-4 py-1 rounded-full shadow-sm hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:border-transparent hover:text-white transition-all duration-300 transform hover:scale-105"
                 >
                   {tech}
                 </span>

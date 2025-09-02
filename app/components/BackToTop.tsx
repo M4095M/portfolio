@@ -30,11 +30,11 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-sky-500 to-indigo-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-pulse"
+          className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 bg-gradient-to-r from-sky-500 to-indigo-500 text-white p-2 sm:p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-pulse"
           aria-label="Back to top"
         >
           <svg
-            className="w-6 h-6"
+            className="w-4 h-4 sm:w-6 sm:h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

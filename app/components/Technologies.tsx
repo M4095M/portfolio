@@ -31,12 +31,12 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="flex flex-col justify-center items-center px-4"
+      className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8"
     >
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center px-4">
         Technologies
       </h1>
-      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 py-8">
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 py-6 md:py-8">
         {skills.map((skill, index) => (
           <div
             key={index}
@@ -48,7 +48,7 @@ const Technologies = () => {
               alt={skill.name}
               width={60}
               height={60}
-              className="transition duration-300"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 transition duration-300"
             />
             <span className="absolute bottom-[-2.5rem] scale-0 group-hover:scale-100 transition-all duration-300 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-sm font-semibold rounded-md px-3 py-1 shadow-lg">
               {skill.name}
