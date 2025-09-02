@@ -97,6 +97,18 @@ const Navbar = () => {
         >
           Education
         </Link>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={499}
+          offset={-101}
+          onClick={() => setIsMobileMenuOpen(false)}
+          activeClass="active bg-gradient-to-t"
+          className="nav-item hover:bg-gradient-to-t from-slateBlue to-royalBlue rounded-lg px-3 py-1 cursor-pointer"
+        >
+          Contact
+        </Link>
       </div>
 
       <div className="social-links flex flex-row gap-5 items-center text-white">

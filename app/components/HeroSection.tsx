@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HeroSection = () => {
   return (
     <section
@@ -5,7 +7,17 @@ const HeroSection = () => {
       className="flex flex-col justify-center items-center min-h-screen text-white px-8 py-16 md:px-16 lg:px-32 relative"
     >
       <main className="flex items-center gap-4">
-        <div className="flex gap-6 items-center justify-center text-center">
+        <div className="flex flex-col gap-6 items-center justify-center text-center">
+          {/* Profile Picture */}
+          <div className="mb-6">
+            <Image
+              src="/me.jpg"
+              alt="Morsli Mohamed Abdennour"
+              width={200}
+              height={200}
+              className="rounded-full border-4 border-sky-500 shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
           <div>
             <div className="text-3xl md:text-5xl mb-4">
               Morsli Mohamed Abdennour

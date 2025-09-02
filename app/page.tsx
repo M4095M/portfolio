@@ -3,6 +3,8 @@ import Technologies from "./components/Technologies";
 import Navbar from "./components/Navbar";
 import Experiences from "./components/Experiences";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
+import BackToTop from "./components/BackToTop";
 
 export default function Home() {
   return (
@@ -12,9 +14,11 @@ export default function Home() {
       <Technologies />
       <Experiences />
       <Education />
-      <footer className="flex justify-center text-sm font-extralight">
+      <Contact />
+      <footer className="flex justify-center text-sm font-extralight py-8">
         Morsli Mohamed Abdennour -M4095M-
       </footer>
+      <BackToTop />
     </div>
   );
 }
